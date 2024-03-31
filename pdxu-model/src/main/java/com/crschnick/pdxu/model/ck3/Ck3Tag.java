@@ -66,6 +66,10 @@ public class Ck3Tag {
             return Optional.empty();
         }
 
+        // DEV
+        Ck3Traits.fromNode(n);
+        // TEST
+
         var house = new Ck3House(
                 Ck3Strings.cleanCk3FormatData(n.getNodeForKey("meta_data").getNodeForKey("meta_house_name").getString()),
                 CoatOfArms.fromNode(n.getNodeForKey("meta_data").getNodeForKey("meta_house_coat_of_arms"), null));
